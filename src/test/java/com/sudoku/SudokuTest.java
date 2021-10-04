@@ -60,16 +60,16 @@ class SudokuTest {
 	@BeforeEach
 	void setUpBeforeClass() throws Exception {
 		// PUZZLE 0 UNSOLVED
-		puzzle0unsolved1 = new Sudoku("samplePuzzles/puzzle0.txt");
+		puzzle0unsolved1 = new Sudoku("src/test/resources/samplePuzzles/puzzle0.txt");
 		
 		// PUZZLE 0 UNSOLVED
-		puzzle0unsolved2 = new Sudoku("samplePuzzles/puzzle0.txt");
+		puzzle0unsolved2 = new Sudoku("src/test/resources/samplePuzzles/puzzle0.txt");
 
 		// PUZZLE 0 SOLVED
-		puzzle0solved1 = new Sudoku("samplePuzzles/puzzle0Solved.txt");
+		puzzle0solved1 = new Sudoku("src/test/resources/samplePuzzles/puzzle0Solved.txt");
 
 		// PUZZLE 0 SOLVED
-		puzzle0solved2 = new Sudoku("samplePuzzles/puzzle0Solved.txt");
+		puzzle0solved2 = new Sudoku("src/test/resources/samplePuzzles/puzzle0Solved.txt");
 	}
 	
 	@Test
@@ -153,7 +153,7 @@ class SudokuTest {
 			// puzzle1.txt takes the longest to complete. Commenting out this line will solve that puzzle.
 			if (i == 1) continue; 
 
-			Sudoku puzzle = new Sudoku("samplePuzzles/puzzle" + i + ".txt");
+			Sudoku puzzle = new Sudoku("src/test/resources/samplePuzzles/puzzle" + i + ".txt");
 			puzzle.solveSudoku();
 			
 			// Puzzles 15, 20, 25 and 40 are not solvable
@@ -182,7 +182,7 @@ class SudokuTest {
 	
 	@Test
 	void testVerifyFalse() {
-		Sudoku puzzle = new Sudoku("samplePuzzles/puzzle40.txt");
+		Sudoku puzzle = new Sudoku("src/test/resources/samplePuzzles/puzzle40.txt");
 		assertFalse(puzzle.verify());
 	}
 	
